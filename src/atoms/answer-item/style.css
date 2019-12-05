@@ -1,0 +1,13 @@
+.answer-item {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0px;
+    background-color: #FFFFFF;
+    position: relative;
+    box-shadow: 0px 1px 5px 0px #9E9E9E;
+    list-style-type: none;
+}
+
+.answer-item:hover {
+    background-color: #CCC;
+}
