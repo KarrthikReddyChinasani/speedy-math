@@ -17,7 +17,14 @@ class Body extends PureComponent {
             if (random === i) {
                 options[i] = answer;
             } else {
-                options[i] = i !== 0 ? i * 0.5 + answer : answer + 2
+                const data = answer.toString();
+                if(data.length > 2) {
+                    const randomIndex = utils.fetchRandomNumber(0, data.toString().length - 1);
+                    const randomNumber = utils.fetchRandomNumber(0, 9);
+                    options[i] = data.substring(0, randomIndex) + `${randomNumber}`+data.substring(randomIndex + 1)
+                } else {
+                    options[i] = i !== 0 ? i * 0.5 + answer : answer + 2
+                }
             }
         }
         return options;
